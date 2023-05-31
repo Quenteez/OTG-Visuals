@@ -1,8 +1,20 @@
+buildscript {
+	repositories {
+		mavenCentral() // or gradlePluginPortal()
+	}
+	dependencies {
+		classpath("com.dipien:semantic-version-gradle-plugin:2.0.0")
+	}
+}
+
 plugins {
 	id 'fabric-loom' version '1.1-SNAPSHOT'
 	id 'maven-publish'
 	
 }
+
+version = "1.0.0" // Assign your project version here
+apply plugin: "com.dipien.semantic-version"
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
