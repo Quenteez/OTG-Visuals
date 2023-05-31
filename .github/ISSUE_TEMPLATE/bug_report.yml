@@ -1,0 +1,32 @@
+name: Bug report
+about: Create a report that will help me find and fix errors
+labels: report
+body:
+- type: input
+  id: otg-version
+  attributes:
+    label: OTG-Visuals version
+    placeholder: "e.g. 1.0.0"
+  validations:
+    required: true
+- type: input
+  id: mc-version
+  attributes:
+    label: Minecraft version
+    placeholder: "e.g. 1.16.5"
+  validations:
+    required: true
+- type: input
+  id: logfile
+  attributes:
+    label: Log with Error
+    description: "The link to your log file (uploaded to [mclo.gs](https://mclo.gs/) or [paste.md-5.net](https://paste.md-5.net/))"
+  validations:
+    required: false
+- type: textarea
+  id: body
+  attributes:
+    label: Description of Bug
+    description: | 
+      A clear and concise description of what the bug is. 
+      If applicable, add screenshots or video to help explain your problem.
