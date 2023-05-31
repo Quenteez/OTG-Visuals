@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "ru.quenteez.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "BackgroundRendererMixin",
+    "BiomeColorsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

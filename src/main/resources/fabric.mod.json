@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "otg",
+	"version": "${version}",
+	"name": "OTGVisuals",
+	"description": "Client-side mod for visual effects in OTG biomes",
+	"authors": [
+		"Quenteez"
+	],
+	"contributors": [
+		"PG85",
+		"MCPitman",
+		"Authvin",
+		"Josh",
+		"SuperCoder79",
+		"Wahrheit"
+	],
+	"contact": {
+		"homepage": "https://www.openterraingenerator.org/",
+		"sources": ""
+	},
+	"license": "MIT",
+	"icon": "assets/otgvisuals/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"ru.quenteez.OTGMain"
+		]
+	},
+	"mixins": [
+		"otgvisuals.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.9",
+		"minecraft": "~1.16.5",
+		"java": ">=8"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
