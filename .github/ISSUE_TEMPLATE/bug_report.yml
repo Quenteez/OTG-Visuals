@@ -1,5 +1,5 @@
 name: Bug report
-# about: Create a report that will help me find and fix errors
+description: Create a report that will help me find and fix errors
 labels: report
 body:
 - type: input
