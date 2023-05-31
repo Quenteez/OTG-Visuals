@@ -31,5 +31,5 @@ jobs:
 
       - run: ./gradlew incrementVersion --versionIncrementType=${{ github.event.inputs.versionIncrementType }} --versionIncrementBranch=${{ github.event.inputs.versionIncrementBranch }}
         env:
-          gitUserEmail: ${{ potapovbn@gmail.com }}
-          gitUserName: ${{ Quenteez }}
+          gitUserEmail: potapovbn@gmail.com
+          gitUserName: Quenteez
