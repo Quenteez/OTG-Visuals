@@ -1,8 +1,6 @@
 package ru.quenteez.network;
 
 import net.minecraft.network.PacketByteBuf;
-import net.minecraft.util.Identifier;
-import ru.quenteez.OTGMain;
 
 import java.util.Map;
 
@@ -27,6 +25,7 @@ public class PacketSyncBiomeSettings {
                 continue;  // Пропускаем пустое имя биома и переходим к следующей итерации цикла
             }
             String key = "otg" + ":" + preset + "." + biomeName;
+//            Identifier key = new Identifier("otg", preset + "." + biomeName);
             BiomeSettingSyncWrapper wrapper = new BiomeSettingSyncWrapper(buffer);
             packet.syncMap.putIfAbsent(key, wrapper);
         }
