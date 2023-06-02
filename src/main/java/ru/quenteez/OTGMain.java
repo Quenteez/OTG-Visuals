@@ -1,17 +1,18 @@
 package ru.quenteez;
 import net.fabricmc.api.ClientModInitializer;
-import org.apache.logging.log4j.LogManager;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import ru.quenteez.network.ModMessages;
 
-import org.apache.logging.log4j.Logger;
+import ru.quenteez.network.OTGClientSyncManager;
 
 public class OTGMain implements ClientModInitializer {
     public static final String MOD_ID = "otg";
-    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
-    public static String currentBiome;
 
     @Override
     public void onInitializeClient() {
         ModMessages.registerS2CPackets();
+        ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
+            OTGClientSyncManager.getSyncedData().clear();
+        });
     }
 }

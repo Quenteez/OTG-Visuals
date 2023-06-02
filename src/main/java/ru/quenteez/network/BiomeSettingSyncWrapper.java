@@ -64,4 +64,9 @@ public class BiomeSettingSyncWrapper
     public ColorSet getWaterColorControl() {
         return this.waterColorControl;
     }
+
+    public String toString() {
+        return "FogDensity: " + getFogDensity() + ", GrassColorControl: " + getGrassColorControl() +
+                ", FoliageColorControl: " + getFoliageColorControl() + ", WaterColorControl: " + getWaterColorControl();
+    }
 }
